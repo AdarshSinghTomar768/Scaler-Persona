@@ -215,7 +215,7 @@ button:hover {
 }
 
 .messages {
-  min-height: 420px;
+  min-height: 320px;
   max-height: 72vh;
   overflow: auto;
   display: grid;
@@ -229,8 +229,23 @@ button:hover {
   border-radius: 26px;
   padding: 14px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 250, 242, 0.9));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 250, 242, 0.94)),
+    radial-gradient(circle at top right, rgba(184, 91, 50, 0.06), transparent 28%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(125, 50, 25, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 50, 25, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), transparent 85%);
+  pointer-events: none;
 }
 
 .chat-guide {
@@ -247,6 +262,8 @@ button:hover {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(49, 37, 25, 0.08);
+  position: relative;
+  z-index: 1;
 }
 
 .chat-guide span {
@@ -259,6 +276,8 @@ button:hover {
   border-radius: 22px;
   line-height: 1.6;
   box-shadow: var(--shadow-soft);
+  position: relative;
+  z-index: 1;
 }
 
 .message.user {
@@ -287,7 +306,11 @@ button:hover {
 .composer {
   display: grid;
   gap: 12px;
-  margin-top: 14px;
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 22px;
+  background: rgba(255, 251, 245, 0.72);
+  border: 1px solid rgba(49, 37, 25, 0.08);
 }
 
 .composer-label {
@@ -304,10 +327,11 @@ input {
   padding: 14px;
   font: inherit;
   background: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 textarea {
-  min-height: 112px;
+  min-height: 92px;
   resize: vertical;
 }
 
@@ -448,7 +472,7 @@ code {
   }
 
   .messages {
-    min-height: 360px;
+    min-height: 300px;
   }
 
   .chat-guide {
