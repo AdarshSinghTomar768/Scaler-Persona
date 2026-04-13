@@ -80,3 +80,15 @@ def test_voice_config_exposes_live_number() -> None:
     payload = response.json()
     assert payload["phone_number"] == "+1 857 269 2436"
     assert "spoken_booking_path" in payload
+
+
+def test_chat_rag_question_avoids_meta_language() -> None:
+    response = client.post(
+        "/api/chat",
+        json={"message": "Tell me about your RAG experience at WNS.", "history": []},
+    )
+    assert response.status_code == 200
+    answer = response.json()["answer"].lower()
+    assert "retrieved context" not in answer
+    assert "specific grounding" not in answer
+    assert "ns global services" in answer or "wns" in answer

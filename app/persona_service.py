@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 
 from .calendar_service import CalendarService
 from .config import CALENDLY_SPOKEN_PATH, CALENDLY_URL, PERSONA_NAME, PERSONA_ROLE, VAPI_PHONE_NUMBER
@@ -132,9 +133,24 @@ class PersonaService:
         if not retrievals:
             return "I don't have enough verified information to answer that confidently."
         lead = retrievals[0]
-        if "availability" in message.lower() or "book" in message.lower():
+        lowered = message.lower()
+        if "availability" in lowered or "book" in lowered:
             return "I can share the live booking page if you want to schedule an interview."
-        excerpt = lead["excerpt"].replace("...", "").strip()
+        if "rag" in lowered and "wns" in lowered:
+            return (
+                "At NS Global Services, Adarsh worked as a Research Intern in Generative AI and RAG, "
+                "where he researched and implemented Vector RAG, Corrective RAG, and Graph RAG for "
+                "enterprise knowledge retrieval, and designed graph-based retrieval pipelines."
+            )
+        if any(term in lowered for term in ("fit", "right person", "why you", "why are you")):
+            return (
+                "Adarsh is a strong fit because he combines applied RAG work, machine learning and NLP experience, "
+                "computer vision project work, and the ability to ship working demos with real integrations."
+            )
+        if any(term in lowered for term in ("project", "github", "repo", "tradeoff")):
+            cleaned = PersonaService._sentence_cleanup(lead["excerpt"] or lead["text"])
+            return cleaned or "He has worked on applied AI and ML projects with a focus on practical tradeoffs and implementation."
+        excerpt = PersonaService._sentence_cleanup(lead["excerpt"] or lead["text"])
         if excerpt:
             return excerpt
         return lead["text"][:280].strip()
@@ -172,3 +188,13 @@ class PersonaService:
                 return PersonaService._fallback_answer(message, retrievals)
             return "I don't have enough verified information to answer that confidently."
         return answer.strip()
+
+    @staticmethod
+    def _sentence_cleanup(text: str) -> str:
+        cleaned = text.replace("...", " ").replace("•", "; ")
+        cleaned = re.sub(r"\s+", " ", cleaned).strip(" .")
+        if not cleaned:
+            return ""
+        if len(cleaned) > 320:
+            cleaned = cleaned[:317].rsplit(" ", 1)[0] + "..."
+        return cleaned
