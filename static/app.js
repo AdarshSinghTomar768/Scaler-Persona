@@ -14,23 +14,6 @@ function renderMessage(role, content, sources = []) {
   body.textContent = content;
   wrapper.appendChild(body);
 
-  if (sources.length) {
-    const sourcesEl = document.createElement("div");
-    sourcesEl.className = "sources";
-    const trimmedSources = sources.slice(0, 2);
-    sourcesEl.innerHTML = trimmedSources
-      .map((source) => {
-        const label = `${source.source_name}: ${source.title}`;
-        const excerpt = (source.excerpt || "").trim().slice(0, 180);
-        if (source.url) {
-          return `<div><a href="${source.url}" target="_blank" rel="noreferrer">${label}</a><br>${excerpt}${source.excerpt && source.excerpt.length > 180 ? "..." : ""}</div>`;
-        }
-        return `<div>${label}<br>${excerpt}${source.excerpt && source.excerpt.length > 180 ? "..." : ""}</div>`;
-      })
-      .join("");
-    wrapper.appendChild(sourcesEl);
-  }
-
   messagesEl.appendChild(wrapper);
   messagesEl.scrollTop = messagesEl.scrollHeight;
 

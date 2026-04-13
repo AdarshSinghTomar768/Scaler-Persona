@@ -42,13 +42,6 @@ body {
   align-items: end;
 }
 
-.eyebrow {
-  margin: 0 0 8px;
-  color: var(--accent-dark);
-  letter-spacing: 0.18em;
-  font-size: 12px;
-}
-
 h1,
 h2 {
   margin: 0;
@@ -291,18 +284,6 @@ button:hover {
   border: 1px solid rgba(49, 37, 25, 0.08);
 }
 
-.sources {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-
-.sources a {
-  color: var(--accent-dark);
-}
-
 .composer {
   display: grid;
   gap: 12px;
@@ -412,8 +393,7 @@ textarea {
   gap: 10px;
 }
 
-.booking-result a,
-.sources a {
+.booking-result a {
   color: var(--accent-dark);
 }
 
