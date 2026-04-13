@@ -72,3 +72,11 @@ def test_chat_booking_question_returns_link() -> None:
     )
     assert response.status_code == 200
     assert "calendly.com" in response.json()["answer"].lower()
+
+
+def test_voice_config_exposes_live_number() -> None:
+    response = client.get("/api/voice/config")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["phone_number"] == "+1 857 269 2436"
+    assert "spoken_booking_path" in payload

@@ -51,6 +51,11 @@ CALENDLY_URL = os.getenv(
     "CALENDLY_URL",
     "https://calendly.com/adarshsinghtomar7909043383/new-meeting",
 )
+CALENDLY_SPOKEN_PATH = os.getenv(
+    "CALENDLY_SPOKEN_PATH",
+    "calendly dot com slash adarshsinghtomar7909043383 slash new-meeting",
+)
+VAPI_PHONE_NUMBER = os.getenv("VAPI_PHONE_NUMBER", "+1 857 269 2436")
 
 PERSONA_NAME = os.getenv("PERSONA_NAME", "Adarsh Singh Tomar")
 PERSONA_ROLE = os.getenv("PERSONA_ROLE", "AI representative for Adarsh Singh Tomar")

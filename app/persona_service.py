@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 
 from .calendar_service import CalendarService
-from .config import PERSONA_NAME, PERSONA_ROLE
+from .config import CALENDLY_SPOKEN_PATH, CALENDLY_URL, PERSONA_NAME, PERSONA_ROLE, VAPI_PHONE_NUMBER
 from .knowledge import KnowledgeBase
 from .openai_client import OpenAIClient
 
@@ -19,6 +19,21 @@ Rules:
 - Mention tradeoffs when asked about projects.
 - If the user asks about booking or availability, use the live booking link if one is configured.
 - Do not invent projects, employers, dates, metrics, or education details.
+""".strip()
+
+
+VOICE_SYSTEM_PROMPT = f"""
+You are the voice AI representative for {PERSONA_NAME}.
+
+Voice behavior:
+- Start by clearly saying you are Adarsh's AI representative.
+- Keep responses natural, concise, and easy to understand when spoken aloud.
+- Answer questions about Adarsh's background, experience, projects, skills, and fit for the role.
+- If you are unsure, say you do not have grounding for that detail.
+- Do not invent facts, employers, dates, metrics, or achievements.
+- If the caller wants to schedule, say there is a live booking page and mention the spoken path slowly as: {CALENDLY_SPOKEN_PATH}.
+- Prefer saying the spoken booking path instead of reading the full protocol like H T T P S.
+- Mention that the booking page shows live availability and confirms the interview end to end.
 """.strip()
 
 
@@ -72,15 +87,19 @@ class PersonaService:
         return {
             "assistant_name": PERSONA_NAME,
             "first_message": f"Hi, this is the AI representative for {PERSONA_NAME}. I can answer questions about Adarsh's background and help schedule an interview.",
-            "system_prompt": SYSTEM_PROMPT,
+            "system_prompt": VOICE_SYSTEM_PROMPT,
+            "phone_number": VAPI_PHONE_NUMBER,
+            "booking_url": CALENDLY_URL,
+            "spoken_booking_path": CALENDLY_SPOKEN_PATH,
             "tooling": {
                 "chat_endpoint": "/api/chat",
                 "availability_endpoint": "/api/availability",
                 "booking_endpoint": "/api/book",
             },
             "notes": [
-                "Point your Vapi or Retell assistant to these endpoints.",
-                "Use a phone number from Twilio or the voice platform.",
+                "Point your Vapi or Retell assistant to these endpoints if you want backend-driven voice configuration.",
+                f"Current live Vapi number: {VAPI_PHONE_NUMBER}",
+                "For spoken scheduling, prefer the short Calendly path instead of reading the raw URL with protocol.",
                 "Keep interruption handling enabled in the voice platform config.",
             ],
         }
