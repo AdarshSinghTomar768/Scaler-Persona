@@ -1,13 +1,16 @@
 :root {
   color-scheme: light;
   --bg: #f5efe4;
-  --surface: rgba(255, 250, 240, 0.9);
-  --ink: #1e1d1a;
-  --muted: #6a665c;
-  --line: rgba(35, 31, 24, 0.12);
-  --accent: #b4502c;
-  --accent-dark: #7f3418;
+  --surface: rgba(255, 250, 240, 0.84);
+  --surface-strong: rgba(255, 252, 247, 0.94);
+  --ink: #1f1b17;
+  --muted: #655c54;
+  --line: rgba(49, 37, 25, 0.12);
+  --accent: #b85b32;
+  --accent-dark: #7d3219;
+  --accent-soft: #efd2bf;
   --shadow: 0 24px 60px rgba(60, 37, 19, 0.12);
+  --shadow-soft: 0 18px 40px rgba(59, 40, 27, 0.08);
 }
 
 * {
@@ -18,7 +21,8 @@ body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   background:
-    radial-gradient(circle at top left, rgba(180, 80, 44, 0.16), transparent 28%),
+    radial-gradient(circle at top left, rgba(184, 91, 50, 0.2), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(201, 173, 120, 0.18), transparent 18%),
     radial-gradient(circle at right, rgba(34, 116, 165, 0.12), transparent 25%),
     linear-gradient(180deg, #f7f0e6 0%, #efe4d1 100%);
   color: var(--ink);
@@ -31,7 +35,11 @@ body {
 }
 
 .hero {
-  padding: 24px 0 28px;
+  padding: 24px 0 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  gap: 22px;
+  align-items: end;
 }
 
 .eyebrow {
@@ -54,8 +62,8 @@ h1 {
 
 .lede {
   max-width: 760px;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.08rem;
+  line-height: 1.7;
   color: var(--muted);
 }
 
@@ -70,8 +78,50 @@ h1 {
   border: 1px solid var(--line);
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.58);
   font-size: 0.9rem;
+}
+
+.hero-card {
+  background:
+    linear-gradient(180deg, rgba(255, 248, 239, 0.96), rgba(244, 229, 208, 0.9)),
+    var(--surface-strong);
+  border: 1px solid rgba(125, 50, 25, 0.12);
+  border-radius: 28px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card-label {
+  margin: 0 0 14px;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.hero-metrics {
+  display: grid;
+  gap: 14px;
+}
+
+.hero-metrics div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(49, 37, 25, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-metrics strong {
+  font-size: 1rem;
+}
+
+.hero-metrics span {
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .grid {
@@ -111,35 +161,60 @@ button {
   padding: 10px 16px;
   cursor: pointer;
   font: inherit;
+  transition: transform 140ms ease, background 140ms ease, box-shadow 140ms ease;
+  box-shadow: 0 10px 24px rgba(125, 50, 25, 0.18);
 }
 
 button:hover {
   background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.prompt-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.prompt-chip {
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--accent-dark);
+  border: 1px solid rgba(125, 50, 25, 0.14);
+  box-shadow: none;
+  padding: 8px 12px;
+}
+
+.prompt-chip:hover {
+  background: var(--accent-soft);
 }
 
 .messages {
-  min-height: 480px;
+  min-height: 500px;
   max-height: 72vh;
   overflow: auto;
   display: grid;
   gap: 12px;
   padding-right: 4px;
+  padding-bottom: 4px;
 }
 
 .message {
-  padding: 14px 16px;
-  border-radius: 18px;
-  line-height: 1.55;
+  padding: 16px 18px;
+  border-radius: 22px;
+  line-height: 1.6;
+  box-shadow: var(--shadow-soft);
 }
 
 .message.user {
-  background: #f0d0bb;
+  background: linear-gradient(180deg, #f2d9ca, #ebc5ae);
   margin-left: 48px;
 }
 
 .message.assistant {
-  background: white;
+  background: rgba(255, 255, 255, 0.94);
   margin-right: 48px;
+  border: 1px solid rgba(49, 37, 25, 0.08);
 }
 
 .sources {
@@ -167,7 +242,7 @@ input {
   border-radius: 18px;
   padding: 14px;
   font: inherit;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.78);
 }
 
 textarea {
@@ -183,14 +258,15 @@ textarea {
 .booking-link {
   display: inline-block;
   text-decoration: none;
-  background: var(--accent);
+  background: linear-gradient(180deg, var(--accent), var(--accent-dark));
   color: white;
   padding: 12px 18px;
   border-radius: 999px;
+  box-shadow: 0 14px 32px rgba(125, 50, 25, 0.24);
 }
 
 .booking-link:hover {
-  background: var(--accent-dark);
+  filter: brightness(1.02);
 }
 
 .availability,
@@ -199,9 +275,21 @@ textarea {
   gap: 10px;
 }
 
+.availability a,
+.booking-result a,
+.sources a {
+  color: var(--accent-dark);
+}
+
 .availability button.slot {
   text-align: left;
   border-radius: 16px;
+}
+
+.booking-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 243, 232, 0.98), rgba(249, 232, 216, 0.92)),
+    var(--surface-strong);
 }
 
 .small,
@@ -216,11 +304,21 @@ code {
 }
 
 @media (max-width: 920px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
 
   .messages {
     min-height: 360px;
+  }
+
+  .message.user,
+  .message.assistant {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

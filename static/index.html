@@ -9,16 +9,36 @@
   <body>
     <main class="shell">
       <section class="hero">
-        <p class="eyebrow">SCALER SCREENING SUBMISSION</p>
-        <h1>Adarsh AI Persona</h1>
-        <p class="lede">
-          Grounded chat over Adarsh Singh Tomar's real resume and project artifacts, with shared APIs for interview booking and voice-agent integration.
-        </p>
-        <div class="chips">
-          <span>Resume-grounded</span>
-          <span>GitHub-grounded</span>
-          <span>Booking-ready</span>
-          <span>Voice-webhook-ready</span>
+        <div class="hero-copy">
+          <p class="eyebrow">SCALER SCREENING SUBMISSION</p>
+          <h1>Adarsh AI Persona</h1>
+          <p class="lede">
+            A grounded interview persona over Adarsh Singh Tomar's real resume and project artifacts, with public chat, live booking, and voice-ready APIs.
+          </p>
+          <div class="chips">
+            <span>Resume-grounded</span>
+            <span>GitHub-grounded</span>
+            <span>Calendly booking live</span>
+            <span>Voice-webhook-ready</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <p class="hero-card-label">Demo Snapshot</p>
+          <div class="hero-metrics">
+            <div>
+              <strong>Public chat</strong>
+              <span>Live on Vercel</span>
+            </div>
+            <div>
+              <strong>Booking flow</strong>
+              <span>Calendly handoff</span>
+            </div>
+            <div>
+              <strong>Grounding</strong>
+              <span>Resume + project artifacts</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -27,6 +47,11 @@
           <div class="panel-header">
             <h2>Public Chat</h2>
             <button id="seedQuestions">Load prompts</button>
+          </div>
+          <div class="prompt-strip">
+            <button class="prompt-chip" type="button" data-prompt="Why are you the right person for this role?">Why are you a fit?</button>
+            <button class="prompt-chip" type="button" data-prompt="Tell me about your RAG experience at WNS.">RAG at WNS</button>
+            <button class="prompt-chip" type="button" data-prompt="Tell me about your strongest GitHub project and its tradeoffs.">Best project</button>
           </div>
           <div id="messages" class="messages"></div>
           <form id="chatForm" class="composer">
@@ -44,7 +69,7 @@
             <div id="availability" class="availability empty">No slots loaded.</div>
           </div>
 
-          <div class="panel">
+          <div class="panel booking-panel">
             <h2>Book Interview</h2>
             <p class="small">Use the live booking page for the most reliable demo.</p>
             <a id="bookingLink" class="booking-link" href="#" target="_blank" rel="noreferrer">Open booking page</a>

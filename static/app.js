@@ -52,6 +52,11 @@ async function sendMessage(message) {
   history.push({ role: "assistant", content: payload.answer });
 }
 
+function setComposerPrompt(prompt) {
+  messageInput.value = prompt;
+  messageInput.focus();
+}
+
 async function loadAvailability() {
   availabilityEl.textContent = "Loading availability...";
   const response = await fetch("/api/availability");
@@ -80,7 +85,7 @@ async function loadAvailability() {
     button.type = "button";
     button.textContent = `${slot.start}${slot.end ? ` to ${slot.end}` : ""}`;
     button.addEventListener("click", () => {
-      document.getElementById("bookStart").value = slot.start;
+      bookingResultEl.innerHTML = `Selected slot: <strong>${slot.start}</strong>. Complete the booking on <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a>.`;
     });
     availabilityEl.appendChild(button);
   });
@@ -113,6 +118,12 @@ document.getElementById("seedQuestions").addEventListener("click", async () => {
   for (const prompt of prompts) {
     await sendMessage(prompt);
   }
+});
+
+document.querySelectorAll(".prompt-chip").forEach((button) => {
+  button.addEventListener("click", () => {
+    setComposerPrompt(button.dataset.prompt || "");
+  });
 });
 
 renderMessage(
