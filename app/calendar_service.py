@@ -12,6 +12,7 @@ from .config import (
     CALCOM_API_VERSION,
     CALCOM_EVENT_TYPE_ID,
     CALCOM_TIMEZONE,
+    CALENDLY_URL,
     GOOGLE_ACCESS_TOKEN,
     GOOGLE_CALENDAR_ID,
     GOOGLE_CLIENT_ID,
@@ -23,6 +24,14 @@ from .config import (
 
 class CalendarService:
     def get_slots(self, days: int = 7) -> dict:
+        if CALENDLY_URL:
+            return {
+                "provider": "calendly",
+                "status": "external_booking",
+                "message": "Use the live Calendly link to see real availability and book instantly.",
+                "booking_url": CALENDLY_URL,
+                "slots": [],
+            }
         if GOOGLE_REFRESH_TOKEN or GOOGLE_ACCESS_TOKEN:
             return self._get_google_slots(days=days)
         if CALCOM_API_KEY and CALCOM_EVENT_TYPE_ID:
@@ -35,6 +44,13 @@ class CalendarService:
         }
 
     def book(self, name: str, email: str, start_at: str, notes: str = "") -> dict:
+        if CALENDLY_URL:
+            return {
+                "provider": "calendly",
+                "status": "external_booking",
+                "message": "Complete the booking on Calendly.",
+                "booking_url": CALENDLY_URL,
+            }
         if GOOGLE_REFRESH_TOKEN or GOOGLE_ACCESS_TOKEN:
             return self._book_google(name=name, email=email, start_at=start_at, notes=notes)
         if CALCOM_API_KEY and CALCOM_EVENT_TYPE_ID:

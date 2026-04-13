@@ -47,6 +47,7 @@ GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
 GOOGLE_REFRESH_TOKEN = os.getenv("GOOGLE_REFRESH_TOKEN", "")
 GOOGLE_CALENDAR_ID = os.getenv("GOOGLE_CALENDAR_ID", "primary")
 GOOGLE_TIMEZONE = os.getenv("GOOGLE_TIMEZONE", "Asia/Kolkata")
+CALENDLY_URL = os.getenv("CALENDLY_URL", "")
 
 PERSONA_NAME = os.getenv("PERSONA_NAME", "Adarsh Singh Tomar")
 PERSONA_ROLE = os.getenv("PERSONA_ROLE", "AI representative for Adarsh Singh Tomar")

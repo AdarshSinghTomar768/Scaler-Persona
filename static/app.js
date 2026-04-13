@@ -2,8 +2,8 @@ const messagesEl = document.getElementById("messages");
 const chatForm = document.getElementById("chatForm");
 const messageInput = document.getElementById("messageInput");
 const availabilityEl = document.getElementById("availability");
-const bookingForm = document.getElementById("bookingForm");
 const bookingResultEl = document.getElementById("bookingResult");
+const bookingLinkEl = document.getElementById("bookingLink");
 
 const history = [];
 
@@ -62,7 +62,14 @@ async function loadAvailability() {
   }
 
   if (!payload.slots || payload.slots.length === 0) {
-    availabilityEl.innerHTML = `<div class="empty">${payload.message || "No slots available."}</div>`;
+    const link = payload.booking_url
+      ? `<a href="${payload.booking_url}" target="_blank" rel="noreferrer">Open live booking page</a>`
+      : "";
+    availabilityEl.innerHTML = `<div class="empty">${payload.message || "No slots available."}</div>${link}`;
+    if (payload.booking_url) {
+      bookingLinkEl.href = payload.booking_url;
+      bookingResultEl.innerHTML = `Use <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a> to complete the booking.`;
+    }
     return;
   }
 
@@ -108,26 +115,11 @@ document.getElementById("seedQuestions").addEventListener("click", async () => {
   }
 });
 
-bookingForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  bookingResultEl.textContent = "Submitting booking...";
-  const payload = {
-    name: document.getElementById("bookName").value.trim(),
-    email: document.getElementById("bookEmail").value.trim(),
-    start_at: document.getElementById("bookStart").value.trim(),
-    notes: document.getElementById("bookNotes").value.trim(),
-  };
-
-  const response = await fetch("/api/book", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
-  const result = await response.json();
-  bookingResultEl.textContent = JSON.stringify(result, null, 2);
-});
-
 renderMessage(
   "assistant",
   "I am Adarsh's AI representative. Ask about resume details, project tradeoffs, or load availability to book an interview."
 );
+
+loadAvailability().catch((error) => {
+  availabilityEl.textContent = error.message;
+});
