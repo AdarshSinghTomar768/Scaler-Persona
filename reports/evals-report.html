@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adarsh AI Persona Evals Report</title>
+    <style>
+      body {
+        font-family: Georgia, serif;
+        margin: 44px;
+        color: #1f1d1a;
+        line-height: 1.45;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+      h2 {
+        font-size: 16px;
+        margin: 18px 0 8px;
+      }
+      p, li {
+        font-size: 12px;
+      }
+      ul {
+        margin-top: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Adarsh AI Persona Evals Report</h1>
+    <p>
+      The system was evaluated on voice performance, chat groundedness, failure handling, and production readiness.
+    </p>
+
+    <h2>Voice Quality</h2>
+    <ul>
+      <li>Latency: measured time to first spoken response after caller utterance end, with a target below 2 seconds.</li>
+      <li>Accuracy: compared spoken answers against the retrieved resume and repo evidence.</li>
+      <li>Task completion: checked whether the agent answered follow-ups, offered availability, and completed booking.</li>
+    </ul>
+
+    <h2>Chat Groundedness</h2>
+    <ul>
+      <li>Hallucination rate: sampled answers for unsupported claims across resume, project, and fit questions.</li>
+      <li>Retrieval quality: validated that the top chunks matched the intended source, especially for RAG and project prompts.</li>
+      <li>Citation usefulness: confirmed the UI showed enough source context for manual verification.</li>
+    </ul>
+
+    <h2>Failure Modes And Fixes</h2>
+    <ul>
+      <li>Resume retrieval was too coarse. Fix: added PDF extraction and tighter chunking.</li>
+      <li>Fit questions retrieved repo docs instead of resume facts. Fix: added query expansion and resume boosts.</li>
+      <li>Booking could look successful without provider credentials. Fix: return explicit <code>missing_credentials</code> errors.</li>
+    </ul>
+
+    <h2>Two More Weeks</h2>
+    <ul>
+      <li>Add full conversational tool calling so chat can gather booking info end to end without a separate form.</li>
+      <li>Add automated eval harnesses for latency, interruption handling, and retrieval precision at k.</li>
+      <li>Add deployment automation for Vercel or Fly.io plus bootstrap scripts for Vapi, Twilio, and Cal.com.</li>
+    </ul>
+  </body>
+</html>

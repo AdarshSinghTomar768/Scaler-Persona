@@ -1,0 +1,739 @@
+{
+  "generated_from": [
+    "/Users/adarsh/Downloads/AdarshResNew.pdf",
+    "/Users/adarsh/Documents/Yolo CV/readme.md",
+    "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+    "/Users/adarsh/autonomous-devops-agent/FixForge/backend/main.py"
+  ],
+  "chunks": [
+    {
+      "chunk_id": "adarsh-resume-header",
+      "title": "Adarsh Resume header",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Adarsh Singh Tomar\nMachine Learning Intern | Deep Learning | NLP | RAG\nadarshsinghtomar7909043383@gmail.com\n9508557310\nBangalore, India\nGithub\nLinkedIn"
+    },
+    {
+      "chunk_id": "adarsh-resume-1",
+      "title": "Adarsh Resume chunk 1",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Profile\nMachine Learning enthusiast with hands-on experience in deep learning, NLP, and Transformer-based models.\nSkilled in building end-to-end ML pipelines including data preprocessing, model training, evaluation, and\ndeployment. Actively seeking ML/ AI internship opportunities."
+    },
+    {
+      "chunk_id": "adarsh-resume-1",
+      "title": "Adarsh Resume chunk 1",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Professional Experience WNS Global Services , Research Intern, Generative AI & RAG \u2022 Researched and implemented Retrieval-Augmented Generation (RAG) techniques including Vector RAG, Corrective RAG, and Graph RAG for enterprise knowledge retrieval. \u2022 Designed and integrated graph-based retrieval pipelines using AWS Neptune, Neo4j, and OpenSearch . 03/2025 \u2013 06/2025 Bangalore, India \u2022 Built and deployed interactive Q&A applications using LangChain, Groq, Streamlit , with graph querying via SPARQL and Gremlin . \u2022 Explored and evaluated Vibe Coding (Cursor-based AI coding assistant) by building structured, production-style applications. \u2022 Conducted comparative analysis of"
+    },
+    {
+      "chunk_id": "adarsh-resume-2",
+      "title": "Adarsh Resume chunk 2",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Vibe Coding vs low-code/no-code platforms , identifying benefits, limitations, and real-world applicability. \u2022 Documented research findings and architectural insights for team handoff and internal knowledge sharing ."
+    },
+    {
+      "chunk_id": "adarsh-resume-1",
+      "title": "Adarsh Resume chunk 1",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Projects Computer Vision Powered Image Search Engine , Python, YOLO (Ultralytics), OpenCV, Streamlit \u2022 Built an end-to-end computer vision system using YOLO to detect objects and generate searchable image metadata. \u2022 Implemented metadata-driven image search using logical filters (AND/ OR) and object count thresholds. \u2022 Designed an interactive Streamlit UI to visualize detection results with bounding boxes. \u2022 Modularized inference and configuration components for scalability and maintainability. End-to-End MLOps Pipeline \u2013 Network Intrusion Detection , Python, MLflow, FastAPI, Scikit-learn \u2022"
+    },
+    {
+      "chunk_id": "adarsh-resume-2",
+      "title": "Adarsh Resume chunk 2",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Built an end-to-end machine learning\u2013based network intrusion detection system to classify network traffic as normal or malicious. \u2022 Implemented data ingestion, preprocessing, feature engineering, and model training pipelines for effective threat detection. \u2022 Evaluated multiple ML models to analyze abnormal network patterns and improve detection accuracy. \u2022 Modularized data processing, training, and inference components for scalability and maintainability. Transformer-Based Sentiment Analysis (IMDB Reviews) , Python, PyTorch, Hugging Face, BERT, Streamlit \u2022 Built an end-to-end Transformer-based sentiment analysis system using BERT to classify movie reviews as positive or negative. \u2022"
+    },
+    {
+      "chunk_id": "adarsh-resume-3",
+      "title": "Adarsh Resume chunk 3",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Implemented data ingestion, tokenization, fine-tuning, and evaluation pipelines using Hugging Face and PyTorch. \u2022 Evaluated model performance using accuracy, precision, recall, and F1-score. \u2022 Deployed the trained model using Streamlit for real-time inference with a modular project structure."
+    },
+    {
+      "chunk_id": "adarsh-resume-1",
+      "title": "Adarsh Resume chunk 1",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Skills\nProgramming Languages & Databases\nPython, Java,SQL, MongoDB\nDeep Learning & NLP\nNeural Networks, CNNs, RNNs, LSTM,Transformers\n(BERT),,Transfer Learning,Tokenization, TF-IDF, Word\nEmbeddings,Sentiment Analysis, Text Classification\nComputer Vision\nYOLO, OpenCV, Image Processing\nMachine Learning & Data Science\nSupervised & Unsupervised Learning,Classification,\nRegression, Clustering,Feature Engineering, EDA, Model\nOptimization\nRetrieval-Augmented Generation (RAG)\nVector RAG, Corrective RAG, Graph RAG,LangChain,\nFAISS, Groq,SPARQL, Gremlin\nMLOps & Deployment\nMLflow, FastAPI, Flask,Streamlit, Docker"
+    },
+    {
+      "chunk_id": "adarsh-resume-1",
+      "title": "Adarsh Resume chunk 1",
+      "source_type": "resume",
+      "source_name": "Adarsh Resume",
+      "source_path": "/Users/adarsh/Downloads/AdarshResNew.pdf",
+      "url": null,
+      "text": "Education\nScaler \nSchool \nof \nTechnology \n/ \nBITS \nPilani\n, \nBachelor \nof \nScience \nin \nComputer \nScience\n2023 \u2013 2026\nBangalore"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-1",
+      "title": "Computer-Vision-Powered-Search-Application chunk 1",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "# \ud83e\udde0 YOLOv11 Computer Vision Powered Search Application"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-2",
+      "title": "Computer-Vision-Powered-Search-Application chunk 2",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "A **Streamlit-based computer vision search engine** powered by **YOLOv11**, allowing users to process large image datasets, perform object detection, and **search images using intelligent filters** such as object class, count thresholds, and logical conditions (OR / AND)."
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-3",
+      "title": "Computer-Vision-Powered-Search-Application chunk 3",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-4",
+      "title": "Computer-Vision-Powered-Search-Application chunk 4",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\ude80 Features"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-5",
+      "title": "Computer-Vision-Powered-Search-Application chunk 5",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### \ud83d\udd0d Intelligent Image Search\n- Search images by detected object classes\n- OR / AND logic for multi-class queries\n- Optional object count thresholds per class"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-6",
+      "title": "Computer-Vision-Powered-Search-Application chunk 6",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### \ud83d\udcf8 Visual Result Exploration\n- Bounding box visualization\n- Highlight matched classes\n- Responsive image grid layout\n- Modern card-style UI"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-7",
+      "title": "Computer-Vision-Powered-Search-Application chunk 7",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### \u2699\ufe0f Inference & Metadata Management\n- Run YOLOv11 inference on image folders\n- Save metadata as JSON\n- Load previously processed metadata\n- Avoids re-processing images unnecessarily"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-8",
+      "title": "Computer-Vision-Powered-Search-Application chunk 8",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### \ud83e\udde0 User-Friendly UI\n- Built using Streamlit\n- Interactive filters & controls\n- Real-time result updates"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-9",
+      "title": "Computer-Vision-Powered-Search-Application chunk 9",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-10",
+      "title": "Computer-Vision-Powered-Search-Application chunk 10",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\uddc2 Project Structure"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-11",
+      "title": "Computer-Vision-Powered-Search-Application chunk 11",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-12",
+      "title": "Computer-Vision-Powered-Search-Application chunk 12",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "YOLO_IMAGE_SEARCH/\n\u2502\n\u251c\u2500\u2500 app.py # Streamlit application\n\u251c\u2500\u2500 README.md # Project documentation\n\u2502\n\u251c\u2500\u2500 configs/\n\u2502 \u2514\u2500\u2500 default.yaml # Model & data configuration\n\u2502\n\u251c\u2500\u2500 src/\n\u2502 \u251c\u2500\u2500 inference.py # YOLOv11 inference logic\n\u2502 \u251c\u2500\u2500 utils.py # Metadata utilities\n\u2502 \u2514\u2500\u2500 config.py # Config loader\n\u2502\n\u251c\u2500\u2500 data/\n\u2502 \u2514\u2500\u2500 processed/ # Generated metadata\n\u2502\n\u2514\u2500\u2500 requirements.txt # Python dependencies"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-13",
+      "title": "Computer-Vision-Powered-Search-Application chunk 13",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-14",
+      "title": "Computer-Vision-Powered-Search-Application chunk 14",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-15",
+      "title": "Computer-Vision-Powered-Search-Application chunk 15",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\udee0 Tech Stack"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-16",
+      "title": "Computer-Vision-Powered-Search-Application chunk 16",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "- **Python 3.9+**\n- **YOLOv11 (Ultralytics)**\n- **Streamlit**\n- **PyTorch**\n- **Pillow (PIL)**\n- **NumPy**"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-17",
+      "title": "Computer-Vision-Powered-Search-Application chunk 17",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-18",
+      "title": "Computer-Vision-Powered-Search-Application chunk 18",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \u2699\ufe0f Installation"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-19",
+      "title": "Computer-Vision-Powered-Search-Application chunk 19",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### 1\ufe0f\u20e3 Clone the repository\n```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-20",
+      "title": "Computer-Vision-Powered-Search-Application chunk 20",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "git clone [https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application](https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application)\ncd yolo-image-search"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-21",
+      "title": "Computer-Vision-Powered-Search-Application chunk 21",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-22",
+      "title": "Computer-Vision-Powered-Search-Application chunk 22",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### 2\ufe0f\u20e3 Create and activate virtual environment\n```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-23",
+      "title": "Computer-Vision-Powered-Search-Application chunk 23",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "python -m venv venv\nsource venv/bin/activate # macOS / Linux\nvenv\\Scripts\\activate # Windows"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-24",
+      "title": "Computer-Vision-Powered-Search-Application chunk 24",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-25",
+      "title": "Computer-Vision-Powered-Search-Application chunk 25",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### 3\ufe0f\u20e3 Install dependencies\n```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-26",
+      "title": "Computer-Vision-Powered-Search-Application chunk 26",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "pip install -r requirements.txt"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-27",
+      "title": "Computer-Vision-Powered-Search-Application chunk 27",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-28",
+      "title": "Computer-Vision-Powered-Search-Application chunk 28",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-29",
+      "title": "Computer-Vision-Powered-Search-Application chunk 29",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \u25b6\ufe0f Run the Application"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-30",
+      "title": "Computer-Vision-Powered-Search-Application chunk 30",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-31",
+      "title": "Computer-Vision-Powered-Search-Application chunk 31",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "streamlit run app.py"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-32",
+      "title": "Computer-Vision-Powered-Search-Application chunk 32",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-33",
+      "title": "Computer-Vision-Powered-Search-Application chunk 33",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "Open in browser:\n```"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-34",
+      "title": "Computer-Vision-Powered-Search-Application chunk 34",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "[http://localhost:8501](http://localhost:8501)"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-35",
+      "title": "Computer-Vision-Powered-Search-Application chunk 35",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "````"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-36",
+      "title": "Computer-Vision-Powered-Search-Application chunk 36",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-37",
+      "title": "Computer-Vision-Powered-Search-Application chunk 37",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\udcc2 How to Use"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-38",
+      "title": "Computer-Vision-Powered-Search-Application chunk 38",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### \ud83d\udd39 Process New Images\n1. Enter image directory path\n2. Provide YOLOv11 model weights (`yolo11m.pt`)\n3. Click **Start Inference**\n4. Metadata is saved automatically"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-39",
+      "title": "Computer-Vision-Powered-Search-Application chunk 39",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "### \ud83d\udd39 Load Existing Metadata\n1. Provide path to `metadata.json`\n2. Instantly load results without re-running inference"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-40",
+      "title": "Computer-Vision-Powered-Search-Application chunk 40",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-41",
+      "title": "Computer-Vision-Powered-Search-Application chunk 41",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\udd0d Search Options"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-42",
+      "title": "Computer-Vision-Powered-Search-Application chunk 42",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "| Feature | Description |\n|------|------------|\n| OR Search | Match any selected object |\n| AND Search | Match all selected objects |\n| Count Threshold | Limit object count per class |\n| Bounding Boxes | Toggle detection boxes |\n| Highlight Matches | Emphasize matched classes |\n| Grid Layout | Adjustable image grid |"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-43",
+      "title": "Computer-Vision-Powered-Search-Application chunk 43",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-44",
+      "title": "Computer-Vision-Powered-Search-Application chunk 44",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\udcc1 Metadata Format (Example)"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-45",
+      "title": "Computer-Vision-Powered-Search-Application chunk 45",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "```json\n{\n \"image_path\": \"path/to/image.jpg\",\n \"detections\": [\n {\n \"class\": \"person\",\n \"confidence\": 0.92,\n \"bbox\": [34, 45, 230, 400]\n }\n ],\n \"class_counts\": {\n \"person\": 2,\n \"car\": 1\n }\n}\n````"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-46",
+      "title": "Computer-Vision-Powered-Search-Application chunk 46",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-47",
+      "title": "Computer-Vision-Powered-Search-Application chunk 47",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \u26a1 Performance Notes"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-48",
+      "title": "Computer-Vision-Powered-Search-Application chunk 48",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "* Supports **CPU**, **Apple Silicon (MPS)**, and **CUDA**\n* Metadata caching improves performance\n* Suitable for large image datasets"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-49",
+      "title": "Computer-Vision-Powered-Search-Application chunk 49",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-50",
+      "title": "Computer-Vision-Powered-Search-Application chunk 50",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\udea7 Future Improvements"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-51",
+      "title": "Computer-Vision-Powered-Search-Application chunk 51",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "* \ud83d\udd0d Click-to-zoom image preview\n* \ud83d\udce4 Export filtered results\n* \ud83e\udde0 Semantic search using embeddings\n* \ud83d\udcca Analytics dashboard"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-52",
+      "title": "Computer-Vision-Powered-Search-Application chunk 52",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "---"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-53",
+      "title": "Computer-Vision-Powered-Search-Application chunk 53",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "## \ud83d\udc68\u200d\ud83d\udcbb Author"
+    },
+    {
+      "chunk_id": "computer-vision-powered-search-application-54",
+      "title": "Computer-Vision-Powered-Search-Application chunk 54",
+      "source_type": "github_repo",
+      "source_name": "Computer-Vision-Powered-Search-Application",
+      "source_path": "/Users/adarsh/Documents/Yolo CV/readme.md",
+      "url": "https://github.com/AdarshSinghTomar768/Computer-Vision-Powered-Search-Application",
+      "text": "**Adarsh**\nMachine Learning & Computer Vision Enthusiast"
+    },
+    {
+      "chunk_id": "meta-hackathon-1",
+      "title": "Meta-Hackathon chunk 1",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "---\ntitle: Real World Task Sim\nemoji: \ud83d\ude80\ncolorFrom: indigo\ncolorTo: blue\nsdk: docker\napp_port: 8000\npinned: false\n---"
+    },
+    {
+      "chunk_id": "meta-hackathon-2",
+      "title": "Meta-Hackathon chunk 2",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "# Real-World Task Simulation Environment (OpenEnv)"
+    },
+    {
+      "chunk_id": "meta-hackathon-3",
+      "title": "Meta-Hackathon chunk 3",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "A standardized, containerized environment for evaluating AI agents on real-world tasks. This environment implements the OpenEnv specification and provides three tasks with incremental difficulty."
+    },
+    {
+      "chunk_id": "meta-hackathon-4",
+      "title": "Meta-Hackathon chunk 4",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "## Tasks & Difficulty"
+    },
+    {
+      "chunk_id": "meta-hackathon-5",
+      "title": "Meta-Hackathon chunk 5",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "1. **Email Triage (Easy)**: Classify a set of emails into categories: Work, Personal, or Spam.\n2. **Data Cleaning (Medium)**: Clean a CSV file by normalizing date formats, removing duplicates, and handling missing values.\n3. **Code Review (Hard)**: Identify and fix a common Python bug (mutable default argument) in a code snippet."
+    },
+    {
+      "chunk_id": "meta-hackathon-6",
+      "title": "Meta-Hackathon chunk 6",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "## Action & Observation Spaces"
+    },
+    {
+      "chunk_id": "meta-hackathon-7",
+      "title": "Meta-Hackathon chunk 7",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "### Action Space (`RealWorldTaskAction`)\n- `task_id`: The ID of the task being addressed.\n- `action_type`: The operation being performed (e.g., \"submit\").\n- `payload`: A dictionary containing task-specific results (e.g., `{ \"predictions\": { \"1\": \"Work\" } }`)."
+    },
+    {
+      "chunk_id": "meta-hackathon-8",
+      "title": "Meta-Hackathon chunk 8",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "### Observation Space (`RealWorldTaskObservation`)\n- `current_task`: The ID of the active task.\n- `prompt`: Instructions for the agent.\n- `data`: The raw data for the task (JSON list, CSV string, or Python code).\n- `done`: Boolean indicating if all tasks are complete.\n- `reward`: Cumulative score (0.0 to 1.0 per task).\n- `last_reward`: Detailed feedback and score for the previous action."
+    },
+    {
+      "chunk_id": "meta-hackathon-9",
+      "title": "Meta-Hackathon chunk 9",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "## Reward Function\n- **Incremental**: Agents receive rewards at each step (one step per task).\n- **Programmatic Graders**: Success is measured by deterministic logic (regex for dates, exact match for categories, code analysis for fixes).\n- **Penalties**: Incorrect task IDs or invalid payloads result in zero reward for that step."
+    },
+    {
+      "chunk_id": "meta-hackathon-10",
+      "title": "Meta-Hackathon chunk 10",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "## Usage"
+    },
+    {
+      "chunk_id": "meta-hackathon-11",
+      "title": "Meta-Hackathon chunk 11",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "### Local Development\n1. Install dependencies:\n ```bash\n pip install openenv-core pandas openai\n uv lock\n ```\n2. Run the environment:\n ```bash\n python -m server.app\n ```"
+    },
+    {
+      "chunk_id": "meta-hackathon-12",
+      "title": "Meta-Hackathon chunk 12",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "### Baseline Inference\nRun the baseline script to evaluate an agent (requires `OPENAI_API_KEY` or `HF_TOKEN`):\n```bash\npython inference.py\n```"
+    },
+    {
+      "chunk_id": "meta-hackathon-13",
+      "title": "Meta-Hackathon chunk 13",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "### Deployment\nDeploy to Hugging Face Spaces using the OpenEnv CLI:\n```bash\nopenenv push\n```"
+    },
+    {
+      "chunk_id": "meta-hackathon-14",
+      "title": "Meta-Hackathon chunk 14",
+      "source_type": "github_repo",
+      "source_name": "Meta-Hackathon",
+      "source_path": "/Users/adarsh/Documents/Meta_Hackathon/README.md",
+      "url": "https://github.com/AdarshSinghTomar768/Meta-Hackathon",
+      "text": "## Specification Compliance\nValidated using `openenv validate`.\n- Typed Pydantic models.\n- Standard `reset()`, `step()`, `state()` interface.\n- `openenv.yaml` manifest.\n- Containerized execution via `Dockerfile`."
+    },
+    {
+      "chunk_id": "fixforge-1",
+      "title": "FixForge chunk 1",
+      "source_type": "github_repo",
+      "source_name": "FixForge",
+      "source_path": "/Users/adarsh/autonomous-devops-agent/FixForge/backend/main.py",
+      "url": "https://github.com/AdarshSinghTomar768/FixForge",
+      "text": "from fastapi import FastAPI\nfrom fastapi.middleware.cors import CORSMiddleware\nfrom api.routes import router"
+    },
+    {
+      "chunk_id": "fixforge-2",
+      "title": "FixForge chunk 2",
+      "source_type": "github_repo",
+      "source_name": "FixForge",
+      "source_path": "/Users/adarsh/autonomous-devops-agent/FixForge/backend/main.py",
+      "url": "https://github.com/AdarshSinghTomar768/FixForge",
+      "text": "app = FastAPI()"
+    },
+    {
+      "chunk_id": "fixforge-3",
+      "title": "FixForge chunk 3",
+      "source_type": "github_repo",
+      "source_name": "FixForge",
+      "source_path": "/Users/adarsh/autonomous-devops-agent/FixForge/backend/main.py",
+      "url": "https://github.com/AdarshSinghTomar768/FixForge",
+      "text": "app.add_middleware(\n CORSMiddleware,\n allow_origins=[\"*\"],\n allow_credentials=True,\n allow_methods=[\"*\"],\n allow_headers=[\"*\"],\n)"
+    },
+    {
+      "chunk_id": "fixforge-4",
+      "title": "FixForge chunk 4",
+      "source_type": "github_repo",
+      "source_name": "FixForge",
+      "source_path": "/Users/adarsh/autonomous-devops-agent/FixForge/backend/main.py",
+      "url": "https://github.com/AdarshSinghTomar768/FixForge",
+      "text": "app.include_router(router)"
+    }
+  ]
+}

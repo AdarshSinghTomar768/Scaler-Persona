@@ -1,0 +1,81 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1325 >>
+stream
+BT
+/F1 12 Tf
+50 770 Td
+14 TL
+(Adarsh AI Persona Evals Report) Tj
+T*
+() Tj
+T*
+(Voice Quality) Tj
+T*
+(- Latency: measured time to first spoken response after caller utterance end; target under) Tj
+T*
+(2s.) Tj
+T*
+(- Accuracy: compared spoken answers against retrieved resume and repo evidence.) Tj
+T*
+(- Task completion: checked follow-ups, availability lookup, and booking completion.) Tj
+T*
+() Tj
+T*
+(Chat Groundedness) Tj
+T*
+(- Hallucination rate: sampled responses for unsupported claims across resume and project) Tj
+T*
+(questions.) Tj
+T*
+(- Retrieval quality: validated top chunks for RAG, repo summary, and role-fit prompts.) Tj
+T*
+(- Citation usefulness: confirmed the UI exposed enough source context for manual review.) Tj
+T*
+() Tj
+T*
+(Failure Modes And Fixes) Tj
+T*
+(- Resume retrieval was too coarse. Fix: PDF extraction plus tighter chunking.) Tj
+T*
+(- Fit questions preferred repo docs. Fix: query expansion and resume weighting.) Tj
+T*
+(- Booking could look complete without credentials. Fix: explicit missing_credentials status.) Tj
+T*
+() Tj
+T*
+(What I Would Improve With 2 More Weeks) Tj
+T*
+(- Add full conversational tool calling for booking inside the chat thread.) Tj
+T*
+(- Add automated latency/interruption/retrieval eval harnesses.) Tj
+T*
+(- Add deployment automation for Vapi, Twilio, and Cal.com.) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1688
+%%EOF

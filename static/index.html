@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adarsh AI Persona</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">SCALER SCREENING SUBMISSION</p>
+        <h1>Adarsh AI Persona</h1>
+        <p class="lede">
+          Grounded chat over Adarsh Singh Tomar's real resume and project artifacts, with shared APIs for interview booking and voice-agent integration.
+        </p>
+        <div class="chips">
+          <span>Resume-grounded</span>
+          <span>GitHub-grounded</span>
+          <span>Booking-ready</span>
+          <span>Voice-webhook-ready</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel chat-panel">
+          <div class="panel-header">
+            <h2>Public Chat</h2>
+            <button id="seedQuestions">Load prompts</button>
+          </div>
+          <div id="messages" class="messages"></div>
+          <form id="chatForm" class="composer">
+            <textarea id="messageInput" placeholder="Ask why Adarsh is a fit, ask about a repo, or ask about availability." required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <aside class="side">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Availability</h2>
+              <button id="loadAvailability">Refresh</button>
+            </div>
+            <div id="availability" class="availability empty">No slots loaded.</div>
+          </div>
+
+          <div class="panel">
+            <h2>Book Interview</h2>
+            <form id="bookingForm" class="booking-form">
+              <input id="bookName" type="text" placeholder="Your name" required />
+              <input id="bookEmail" type="email" placeholder="Your email" required />
+              <input id="bookStart" type="text" placeholder="Selected slot ISO timestamp" required />
+              <textarea id="bookNotes" placeholder="Optional notes"></textarea>
+              <button type="submit">Confirm booking</button>
+            </form>
+            <div id="bookingResult" class="booking-result empty">No booking attempted.</div>
+          </div>
+
+          <div class="panel">
+            <h2>Voice Agent</h2>
+            <p class="small">
+              Phone support is exposed through <code>/api/voice/config</code> for Vapi or Retell. Connect that config to your voice platform and phone number provider.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
