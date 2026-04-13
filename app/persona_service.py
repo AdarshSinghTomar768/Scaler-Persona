@@ -17,7 +17,7 @@ Rules:
 - If the answer is not supported by the sources, say you do not have grounding for it.
 - Be specific and concise.
 - Mention tradeoffs when asked about projects.
-- If the user asks about booking or availability, tell them to use the availability endpoint or booking form unless booking data is already present.
+- If the user asks about booking or availability, use the live booking link if one is configured.
 - Do not invent projects, employers, dates, metrics, or education details.
 """.strip()
 
@@ -32,8 +32,12 @@ class PersonaService:
         retrievals = self.knowledge.search(message, limit=5)
         context = self._format_context(retrievals)
         messages = (history or []) + [{"role": "user", "content": message}]
+        calendar_context = self.calendar.get_slots()
+        booking_answer = self._booking_answer(message, calendar_context)
 
-        if self.openai.enabled:
+        if booking_answer:
+            answer = booking_answer
+        elif self.openai.enabled:
             try:
                 answer = self.openai.answer(
                     SYSTEM_PROMPT + "\n\nRetrieved context:\n" + context,
@@ -106,5 +110,24 @@ class PersonaService:
             return "I don't have grounded context for that yet."
         lead = retrievals[0]
         if "availability" in message.lower() or "book" in message.lower():
-            return "I can answer from grounded documents, but calendar booking needs provider credentials. Use the availability and booking endpoints after configuring Cal.com or Google Calendar."
+            return "I can share the live booking page if you want to schedule an interview."
         return f"Based on {lead['source_name']}: {lead['excerpt']}"
+
+    @staticmethod
+    def _booking_answer(message: str, calendar_context: dict) -> str | None:
+        lowered = message.lower()
+        if not any(keyword in lowered for keyword in ("availability", "available", "book", "schedule", "slot", "meeting", "interview")):
+            return None
+
+        booking_url = calendar_context.get("booking_url")
+        if booking_url:
+            return (
+                "You can book time with me directly here: "
+                f"{booking_url} . "
+                "That page shows the live interview slots and confirms the meeting end to end."
+            )
+
+        message = calendar_context.get("message")
+        if message:
+            return message
+        return "Booking is not configured right now."
