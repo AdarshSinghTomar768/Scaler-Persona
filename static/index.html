@@ -45,7 +45,10 @@
       <section class="grid">
         <div class="panel chat-panel">
           <div class="panel-header">
-            <h2>Ask The Persona</h2>
+            <div>
+              <p class="section-label">Public Chat</p>
+              <h2>Ask The Persona</h2>
+            </div>
             <button id="seedQuestions">Load prompts</button>
           </div>
           <div class="prompt-strip">
@@ -53,8 +56,21 @@
             <button class="prompt-chip" type="button" data-prompt="Tell me about your RAG experience at WNS.">RAG at WNS</button>
             <button class="prompt-chip" type="button" data-prompt="Tell me about your strongest GitHub project and its tradeoffs.">Best project</button>
           </div>
-          <div id="messages" class="messages"></div>
+          <div class="chat-stage">
+            <div class="chat-guide">
+              <div>
+                <strong>Grounded responses</strong>
+                <span>Answers come from Adarsh's real resume and project artifacts.</span>
+              </div>
+              <div>
+                <strong>Strongest prompts</strong>
+                <span>Role fit, RAG experience, GitHub projects, and interview scheduling.</span>
+              </div>
+            </div>
+            <div id="messages" class="messages"></div>
+          </div>
           <form id="chatForm" class="composer">
+            <label class="composer-label" for="messageInput">Ask a question</label>
             <textarea id="messageInput" placeholder="Ask why Adarsh is a fit, ask about a repo, or ask about availability." required></textarea>
             <button type="submit">Send</button>
           </form>
