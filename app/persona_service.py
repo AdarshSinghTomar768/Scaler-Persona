@@ -14,7 +14,9 @@ You speak in first person on behalf of {PERSONA_NAME}, but you must clearly say 
 
 Rules:
 - Use only the retrieved context and the user's question.
-- If the answer is not supported by the sources, say you do not have grounding for it.
+- If the answer is supported by the sources, answer directly and confidently.
+- Never mention internal phrases like "retrieved context", "provided context", "specific grounding", or "my knowledge is based on the retrieved context".
+- If the answer is not supported by the sources, say briefly that you do not have enough verified information and do not guess.
 - Be specific and concise.
 - Mention tradeoffs when asked about projects.
 - If the user asks about booking or availability, use the live booking link if one is configured.
@@ -62,6 +64,8 @@ class PersonaService:
                 answer = self._fallback_answer(message, retrievals)
         else:
             answer = self._fallback_answer(message, retrievals)
+
+        answer = self._clean_answer(answer, message, retrievals)
 
         return {
             "answer": answer,
@@ -126,11 +130,14 @@ class PersonaService:
     @staticmethod
     def _fallback_answer(message: str, retrievals: list[dict]) -> str:
         if not retrievals:
-            return "I don't have grounded context for that yet."
+            return "I don't have enough verified information to answer that confidently."
         lead = retrievals[0]
         if "availability" in message.lower() or "book" in message.lower():
             return "I can share the live booking page if you want to schedule an interview."
-        return f"Based on {lead['source_name']}: {lead['excerpt']}"
+        excerpt = lead["excerpt"].replace("...", "").strip()
+        if excerpt:
+            return excerpt
+        return lead["text"][:280].strip()
 
     @staticmethod
     def _booking_answer(message: str, calendar_context: dict) -> str | None:
@@ -150,3 +157,18 @@ class PersonaService:
         if message:
             return message
         return "Booking is not configured right now."
+
+    @staticmethod
+    def _clean_answer(answer: str, message: str, retrievals: list[dict]) -> str:
+        lowered = answer.lower()
+        meta_markers = (
+            "retrieved context",
+            "provided context",
+            "specific grounding",
+            "my knowledge is based on",
+        )
+        if any(marker in lowered for marker in meta_markers):
+            if retrievals:
+                return PersonaService._fallback_answer(message, retrievals)
+            return "I don't have enough verified information to answer that confidently."
+        return answer.strip()
