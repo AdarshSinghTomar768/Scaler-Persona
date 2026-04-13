@@ -13,13 +13,13 @@
           <p class="eyebrow">SCALER SCREENING SUBMISSION</p>
           <h1>Adarsh AI Persona</h1>
           <p class="lede">
-            A grounded interview persona over Adarsh Singh Tomar's real resume and project artifacts, with public chat, live booking, and voice-ready APIs.
+            A grounded interview persona over Adarsh Singh Tomar's real resume and project artifacts, with live chat, live voice, and real interview booking.
           </p>
           <div class="chips">
             <span>Resume-grounded</span>
             <span>GitHub-grounded</span>
-            <span>Calendly booking live</span>
-            <span>Voice-webhook-ready</span>
+            <span>Voice number live</span>
+            <span>Booking live</span>
           </div>
         </div>
 
@@ -28,15 +28,15 @@
           <div class="hero-metrics">
             <div>
               <strong>Public chat</strong>
-              <span>Live on Vercel</span>
+              <span>Resume and project Q&amp;A</span>
             </div>
             <div>
-              <strong>Booking flow</strong>
-              <span>Calendly handoff</span>
+              <strong>Voice agent</strong>
+              <span>Live Vapi number</span>
             </div>
             <div>
-              <strong>Grounding</strong>
-              <span>Resume + project artifacts</span>
+              <strong>Booking</strong>
+              <span>Calendly confirmation flow</span>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
       <section class="grid">
         <div class="panel chat-panel">
           <div class="panel-header">
-            <h2>Public Chat</h2>
+            <h2>Ask The Persona</h2>
             <button id="seedQuestions">Load prompts</button>
           </div>
           <div class="prompt-strip">
@@ -61,35 +61,48 @@
         </div>
 
         <aside class="side">
-          <div class="panel">
-            <div class="panel-header">
-              <h2>Availability</h2>
-              <button id="loadAvailability">Refresh</button>
-            </div>
-            <div id="availability" class="availability empty">No slots loaded.</div>
-          </div>
-
-          <div class="panel booking-panel">
-            <h2>Book Interview</h2>
-            <p class="small">Use the embedded scheduling view below or open the live booking page in a new tab.</p>
-            <a id="bookingLink" class="booking-link" href="#" target="_blank" rel="noreferrer">Open booking page</a>
-            <div id="bookingResult" class="booking-result empty">No booking attempted.</div>
-            <div class="booking-embed-wrap">
-              <iframe
-                id="bookingEmbed"
-                class="booking-embed"
-                title="Book interview"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="panel">
-            <h2>Voice Agent</h2>
+          <div class="panel action-panel">
+            <p class="section-label">Book Interview</p>
+            <h2>Schedule In Minutes</h2>
             <p class="small">
-              Live voice testing is configured in Vapi. Call <strong>+1 857 269 2436</strong> or use <code>/api/voice/config</code> to mirror the setup in another voice platform.
+              Use the live booking page to see current slots and confirm the interview instantly.
             </p>
+            <a id="bookingLink" class="booking-link" href="#" target="_blank" rel="noreferrer">Open booking page</a>
+            <div id="bookingResult" class="booking-result empty">Loading live booking link...</div>
+          </div>
+
+          <div class="panel signal-panel">
+            <p class="section-label">What To Ask</p>
+            <div class="signal-list">
+              <div>
+                <strong>Role fit</strong>
+                <span>Ask why Adarsh is right for this role.</span>
+              </div>
+              <div>
+                <strong>GitHub projects</strong>
+                <span>Ask about tech stack, purpose, and tradeoffs.</span>
+              </div>
+              <div>
+                <strong>Availability</strong>
+                <span>Ask to schedule and use the live booking link.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel voice-panel">
+            <div class="panel-header compact">
+              <h2>Voice Agent</h2>
+              <span class="status-pill">Live</span>
+            </div>
+            <p class="small">
+              Call the live AI representative to ask about Adarsh's background, projects, fit for the role, and interview booking.
+            </p>
+            <a class="booking-link voice-call-link" href="tel:+18572692436">Call +1 857 269 2436</a>
+            <ul class="voice-list compact-list">
+              <li>Introduces itself as Adarsh's AI representative</li>
+              <li>Answers resume and project questions</li>
+              <li>Handles interview scheduling requests</li>
+            </ul>
           </div>
         </aside>
       </section>

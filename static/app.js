@@ -1,10 +1,8 @@
 const messagesEl = document.getElementById("messages");
 const chatForm = document.getElementById("chatForm");
 const messageInput = document.getElementById("messageInput");
-const availabilityEl = document.getElementById("availability");
 const bookingResultEl = document.getElementById("bookingResult");
 const bookingLinkEl = document.getElementById("bookingLink");
-const bookingEmbedEl = document.getElementById("bookingEmbed");
 
 const history = [];
 
@@ -35,8 +33,8 @@ function renderMessage(role, content, sources = []) {
   messagesEl.scrollTop = messagesEl.scrollHeight;
 
   if (role === "assistant" && content.toLowerCase().includes("calendly.com")) {
-    bookingResultEl.innerHTML = `Booking is live here: <a href="${bookingLinkEl.href}" target="_blank" rel="noreferrer">open the scheduling page</a> or use the embedded calendar below.`;
-    document.querySelector(".booking-panel")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    bookingResultEl.innerHTML = `Booking is live here: <a href="${bookingLinkEl.href}" target="_blank" rel="noreferrer">open the scheduling page</a>.`;
+    document.querySelector(".action-panel")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 }
 
@@ -66,41 +64,33 @@ function setComposerPrompt(prompt) {
 function updateBookingTargets(url) {
   if (!url) return;
   bookingLinkEl.href = url;
-  bookingEmbedEl.src = url;
 }
 
 async function loadAvailability() {
-  availabilityEl.textContent = "Loading availability...";
   const response = await fetch("/api/availability");
   const payload = await response.json();
   if (!response.ok) {
-    availabilityEl.textContent = payload.detail || "Failed to load availability.";
+    bookingResultEl.textContent = payload.detail || "Failed to load booking details.";
     return;
   }
 
   if (!payload.slots || payload.slots.length === 0) {
-    const link = payload.booking_url
-      ? `<a href="${payload.booking_url}" target="_blank" rel="noreferrer">Open live booking page</a>`
-      : "";
-    availabilityEl.innerHTML = `<div class="empty">${payload.message || "No slots available."}</div>${link}`;
     if (payload.booking_url) {
       updateBookingTargets(payload.booking_url);
-      bookingResultEl.innerHTML = `Use <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a> to complete the booking.`;
+      bookingResultEl.innerHTML = `Live booking is ready on <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a>.`;
+    } else {
+      bookingResultEl.textContent = payload.message || "Booking details are unavailable right now.";
     }
     return;
   }
 
-  availabilityEl.innerHTML = "";
-  payload.slots.forEach((slot) => {
-    const button = document.createElement("button");
-    button.className = "slot";
-    button.type = "button";
-    button.textContent = `${slot.start}${slot.end ? ` to ${slot.end}` : ""}`;
-    button.addEventListener("click", () => {
-      bookingResultEl.innerHTML = `Selected slot: <strong>${slot.start}</strong>. Complete the booking on <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a>.`;
-    });
-    availabilityEl.appendChild(button);
-  });
+  const firstSlot = payload.slots[0];
+  if (firstSlot && payload.booking_url) {
+    bookingResultEl.innerHTML = `Current availability starts from <strong>${firstSlot.start}</strong>. Complete the booking on <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a>.`;
+    return;
+  }
+
+  bookingResultEl.textContent = "Booking details are available on the live scheduling page.";
 }
 
 chatForm.addEventListener("submit", async (event) => {
@@ -113,12 +103,6 @@ chatForm.addEventListener("submit", async (event) => {
   } catch (error) {
     renderMessage("assistant", error.message);
   }
-});
-
-document.getElementById("loadAvailability").addEventListener("click", () => {
-  loadAvailability().catch((error) => {
-    availabilityEl.textContent = error.message;
-  });
 });
 
 document.getElementById("seedQuestions").addEventListener("click", async () => {
@@ -144,5 +128,5 @@ renderMessage(
 );
 
 loadAvailability().catch((error) => {
-  availabilityEl.textContent = error.message;
+  bookingResultEl.textContent = error.message;
 });
