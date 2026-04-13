@@ -4,6 +4,7 @@ const messageInput = document.getElementById("messageInput");
 const availabilityEl = document.getElementById("availability");
 const bookingResultEl = document.getElementById("bookingResult");
 const bookingLinkEl = document.getElementById("bookingLink");
+const bookingEmbedEl = document.getElementById("bookingEmbed");
 
 const history = [];
 
@@ -32,6 +33,11 @@ function renderMessage(role, content, sources = []) {
 
   messagesEl.appendChild(wrapper);
   messagesEl.scrollTop = messagesEl.scrollHeight;
+
+  if (role === "assistant" && content.toLowerCase().includes("calendly.com")) {
+    bookingResultEl.innerHTML = `Booking is live here: <a href="${bookingLinkEl.href}" target="_blank" rel="noreferrer">open the scheduling page</a> or use the embedded calendar below.`;
+    document.querySelector(".booking-panel")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
 }
 
 async function sendMessage(message) {
@@ -57,6 +63,12 @@ function setComposerPrompt(prompt) {
   messageInput.focus();
 }
 
+function updateBookingTargets(url) {
+  if (!url) return;
+  bookingLinkEl.href = url;
+  bookingEmbedEl.src = url;
+}
+
 async function loadAvailability() {
   availabilityEl.textContent = "Loading availability...";
   const response = await fetch("/api/availability");
@@ -72,7 +84,7 @@ async function loadAvailability() {
       : "";
     availabilityEl.innerHTML = `<div class="empty">${payload.message || "No slots available."}</div>${link}`;
     if (payload.booking_url) {
-      bookingLinkEl.href = payload.booking_url;
+      updateBookingTargets(payload.booking_url);
       bookingResultEl.innerHTML = `Use <a href="${payload.booking_url}" target="_blank" rel="noreferrer">Calendly</a> to complete the booking.`;
     }
     return;

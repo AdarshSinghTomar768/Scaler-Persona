@@ -71,9 +71,18 @@
 
           <div class="panel booking-panel">
             <h2>Book Interview</h2>
-            <p class="small">Use the live booking page for the most reliable demo.</p>
+            <p class="small">Use the embedded scheduling view below or open the live booking page in a new tab.</p>
             <a id="bookingLink" class="booking-link" href="#" target="_blank" rel="noreferrer">Open booking page</a>
             <div id="bookingResult" class="booking-result empty">No booking attempted.</div>
+            <div class="booking-embed-wrap">
+              <iframe
+                id="bookingEmbed"
+                class="booking-embed"
+                title="Book interview"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
           </div>
 
           <div class="panel">

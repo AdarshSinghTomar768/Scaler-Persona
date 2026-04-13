@@ -292,6 +292,24 @@ textarea {
     var(--surface-strong);
 }
 
+.booking-embed-wrap {
+  margin-top: 14px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(49, 37, 25, 0.1);
+  background: rgba(255, 255, 255, 0.72);
+  min-height: 560px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.booking-embed {
+  display: block;
+  width: 100%;
+  min-height: 560px;
+  border: 0;
+  background: white;
+}
+
 .small,
 .empty {
   color: var(--muted);
@@ -314,6 +332,11 @@ code {
 
   .messages {
     min-height: 360px;
+  }
+
+  .booking-embed-wrap,
+  .booking-embed {
+    min-height: 460px;
   }
 
   .message.user,
