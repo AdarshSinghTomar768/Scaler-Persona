@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adarsh AI Persona - Detailed Evals Report</title>
+    <style>
+      :root {
+        --ink: #1f1b17;
+        --muted: #62584f;
+        --line: #dfd1c1;
+        --paper: #fffdf9;
+        --panel: #fbf4ea;
+        --accent: #9d5331;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 30px 38px;
+        font-family: Georgia, serif;
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.42;
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: 26px;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 15px;
+        color: var(--accent);
+      }
+      h3 {
+        margin: 0 0 6px;
+        font-size: 12px;
+      }
+      p,
+      li,
+      code {
+        font-size: 11px;
+      }
+      .lede {
+        margin: 0 0 14px;
+        color: var(--muted);
+      }
+      .hero {
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, #fffaf2, #f8efe2);
+        border-radius: 14px;
+        padding: 14px 16px;
+        margin-bottom: 14px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .hero-metric {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+      .hero-metric strong {
+        display: block;
+        color: var(--accent);
+        font-size: 11px;
+        margin-bottom: 3px;
+      }
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 14px;
+        align-items: start;
+      }
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--panel);
+        padding: 12px 14px;
+        margin-bottom: 12px;
+      }
+      .metric-list {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .metric-list li {
+        margin-bottom: 6px;
+      }
+      .metric-list strong {
+        color: var(--accent);
+      }
+      .rubric {
+        border: 1px solid var(--line);
+        background: #fff;
+        border-radius: 10px;
+        padding: 8px 10px;
+        font-family: "SFMono-Regular", ui-monospace, monospace;
+        font-size: 10px;
+        white-space: pre-wrap;
+      }
+      .failure {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(159, 83, 49, 0.12);
+      }
+      .failure:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .label {
+        color: var(--accent);
+        font-weight: 700;
+      }
+      ul,
+      ol {
+        margin: 6px 0 0 18px;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>Adarsh AI Persona - Detailed Evals Report</h1>
+      <p class="lede">
+        This evaluation focuses on the three criteria that matter most for an interview-facing AI persona: voice quality,
+        grounded answer behavior, and booking reliability. I used deterministic prompts, manual inspection, and
+        LLM-as-a-judge scoring to measure not just fluency, but whether the system stayed faithful to real resume and
+        project evidence while preserving a valid scheduling path.
+      </p>
+      <div class="hero-grid">
+        <div class="hero-metric">
+          <strong>Voice Eval</strong>
+          Checked latency, factual accuracy, and task completion in Vapi browser tests.
+        </div>
+        <div class="hero-metric">
+          <strong>Chat Eval</strong>
+          Checked hallucination rate, retrieval quality, and answer faithfulness.
+        </div>
+        <div class="hero-metric">
+          <strong>Booking Eval</strong>
+          Checked whether the user always reached a real live booking path with confirmation.
+        </div>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <div>
+        <section class="panel">
+          <h2>Voice Quality</h2>
+          <ul class="metric-list">
+            <li><strong>Latency:</strong> measured from caller utterance end to first assistant reply in Vapi browser tests, targeting sub-2-second first-response behavior so the interaction still feels live.</li>
+            <li><strong>Accuracy:</strong> compared spoken answers against grounded facts for identity, role fit, RAG work, and project tradeoffs.</li>
+            <li><strong>Task Completion:</strong> counted a session as successful when the assistant introduced itself correctly, answered the main question, handled at least one follow-up, and preserved a valid interview-booking path.</li>
+          </ul>
+          <p>
+            I tested prompts like "Who are you?", "Why is Adarsh a strong fit for this role?", "Tell me about his RAG
+            experience", and "Can you help schedule an interview?" A good result required both conversational quality
+            and factual discipline.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>Chat Groundedness</h2>
+          <ul class="metric-list">
+            <li><strong>Hallucination Rate:</strong> counted answers that introduced unsupported employers, dates, achievements, project claims, or technical details.</li>
+            <li><strong>Retrieval Quality:</strong> checked whether top retrieved chunks matched the actual user intent for role-fit, RAG-specific, and GitHub project prompts.</li>
+            <li><strong>Answer Faithfulness:</strong> checked whether the final answer stayed aligned with retrieved evidence instead of drifting into plausible but unsupported claims.</li>
+          </ul>
+          <p>
+            This mattered especially for a resume agent, where a confident but unsupported answer is worse than a short
+            honest answer. I therefore treated "sounds good" and "is grounded" as separate evaluation axes.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>LLM-as-a-Judge</h2>
+          <p>
+            I used LLM-as-a-judge as a structured evaluator over <code>(question, retrieved evidence, answer)</code>.
+            The judge scored groundedness, retrieval relevance, helpfulness, and hallucination risk. It was used as a
+            rubric-based grader, but manual review remained the final authority.
+          </p>
+          <div class="rubric">{
+  "groundedness_score": 1,
+  "retrieval_relevance_score": 1,
+  "helpfulness_score": 1,
+  "hallucination": false,
+  "notes": ""
+}</div>
+          <ul>
+            <li>Is the answer fully supported by the retrieved evidence?</li>
+            <li>Are the retrieved chunks relevant to the real question?</li>
+            <li>Does the answer stay specific without inventing facts?</li>
+            <li>Does the answer remain useful under a follow-up?</li>
+          </ul>
+        </section>
+      </div>
+
+      <div>
+        <section class="panel">
+          <h2>Failure Modes Found And Fixed</h2>
+          <div class="failure">
+            <h3>1. Booking reliability looked stronger than it really was</h3>
+            <p><span class="label">Problem:</span> Google Calendar and Cal.com integrations were inconsistent across local and deployed environments, which meant the UI could look booking-ready while the provider layer still failed.</p>
+            <p><span class="label">Fix:</span> Moved production booking to a stable Calendly handoff so every user-facing booking action resolves to a live scheduling flow with confirmation.</p>
+          </div>
+          <div class="failure">
+            <h3>2. Voice scheduling responses sounded unnatural</h3>
+            <p><span class="label">Problem:</span> The assistant initially tried to read a raw booking URL aloud, which made the experience sound brittle on a live call.</p>
+            <p><span class="label">Fix:</span> Rewrote the voice prompt to use a spoken booking path and shorter scheduling language.</p>
+          </div>
+          <div class="failure">
+            <h3>3. Public UI exposed weak and low-signal states</h3>
+            <p><span class="label">Problem:</span> Empty sections, technical-looking panels, and visible retrieval metadata distracted from the actual demo path.</p>
+            <p><span class="label">Fix:</span> Simplified the homepage to the three core actions: ask, book, and call, while keeping the grounding layer intact underneath.</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>What I Would Improve With 2 More Weeks</h2>
+          <ol>
+            <li>Add true end-to-end voice booking with tool-driven calendar actions instead of a booking-link handoff.</li>
+            <li>Build a batch eval harness that runs saved prompts through retrieval, generation, and LLM-as-a-judge scoring to produce reproducible regression metrics.</li>
+            <li>Expand GitHub indexing so repo-specific answers surface stronger stack, purpose, and tradeoff detail directly from project artifacts.</li>
+          </ol>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
